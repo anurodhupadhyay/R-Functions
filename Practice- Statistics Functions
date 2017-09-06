@@ -1,0 +1,107 @@
+?datasets
+library(help = "datasets")
+data(women)
+View(women)
+mean(women
+     csv_file <- read.table(file="C:\\YYYYYY\\AMMA 2017\\Data\\data_2017\\DP_LIVE_08072017211254922.csv",
+                            header = TRUE, 
+                            sep = ',')
+     str(csv_file)
+     
+     
+     name <- c('A','B','C','D','E')
+     age <- c(23,22,21,25,20)
+     mathmarks <- c(87,86,89,88,79)
+     sciencemarks <- c(65,87,78,55,43)
+     totalmarks <- c(152,153,161,143,182)
+  
+#Create Data Frame   
+     student <- data.frame(Name=c(LETTERS[1:5]),
+                            Age= c(23,22,21,25,20),
+                            maths_mark= c(87,86,83,88,79),
+                            science_marks <- c(65,87,78,55,93))
+                          
+                           
+View (student)
+
+student$total_marks <- student$maths_mark + student$science_marks....c.65..87..78..55..93.
+
+student$pct_mathmarks <- round(100*student$maths_mark/ student$total_marks, digits=2)
+?round
+
+student1 <- student
+
+student1 <- student1[,c(2:6)]
+View(student1)
+
+student1 <- student[,-c(2,3)]
+
+student2 <- student[,c("Name","Age")]
+View(student2)
+
+names(student)
+
+names_student <- names(student)
+
+names(student) <- letters[1:6]
+View(student)
+
+names(student) <- names_student
+
+vect1 <- seq(1,10,by=2)
+vect1
+vect1[3]<- 100
+
+v_col<- names(student)
+v_col
+v_col[3]<- "New_maths"
+
+student3<- student
+View(student)
+
+names(student3)[3]<- "New_maths"
+
+
+#Create 5 new variables/columns for existing columns
+student$log_age <- log(student$Age)
+
+student$exp_age <- exp(student$Age)
+
+student$inv_age <- 1/(student$Age)
+
+student$sqrt_age <- sqrt(student$Age)
+
+student$sqr_age <- student$Age*student$Age
+
+student$exp_age <- exp(student$Age/ mean(student$Age))
+
+class(student$Name)
+
+#Change class from factor to character
+student$Name <- as.character(student$Name)
+
+nn <- c("xx","23",24.5, "78.4")
+nn.num <- as.numeric(nn)
+
+table(is.na(nn.num))
+class(nn)
+
+View(student)
+
+s1<- student$Age>=23
+
+student4 <- student[s1,]
+View(student4)
+
+student4 <- student[!s1,]
+
+student5 <- student[student$science_marks....c.65..87..78..55..93.>80 & student$maths_mark>80,c(1:5)]
+View(student5)
+
+
+?sample
+
+sample_index <- sample(1:nrow(student),3,replace=F)
+
+student6 <- student[sample_index,]
+View(student6)
